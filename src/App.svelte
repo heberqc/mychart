@@ -3,7 +3,11 @@
 	import { onMount } from 'svelte'
 	import Highcharts from 'highcharts'
 
+
 	onMount(async () => {
+		// Apply the theme
+		Highcharts.setOptions(myChartsTheme)
+		// Add the data
 		const myChart = Highcharts.chart('container', {
 			chart: {
 				type: 'bar',
